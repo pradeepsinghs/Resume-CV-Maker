@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Details</title>
+    <link rel="stylesheet" href="./css/basciresume.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+    <section class="container">
+      <form action="" id="mainform">
+        <div class="_title">
+          <h3>About Me</h3>
+        </div>
+
+        <div class="grid_section">
+          <div class="form_control_container">
+            <div class="form_control">
+              <label for="">First Name</label>
+              <input required autocomplete="off"
+                type="text"
+                class="firstname"
+                name="firstName"
+                placeholder="e.g. ayush"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Middle Name (optional)</label>
+              <input 
+                type="text"
+                class="middlename"
+                name="middleName"
+                placeholder=""
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Last Name</label>
+              <input required autocomplete="off" type="text" class="lastname" placeholder="e.g. kharya" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Email</label>
+              <input required autocomplete="off"
+                class="email"
+                type="email"
+                name="email"
+                placeholder="e.g. ayush87269@gmail.com"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Phone No.</label>
+              <input required autocomplete="off"
+                class="phone"
+                type="text"
+                name="phone"
+                placeholder="e.g. 0123456789"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Designation</label>
+              <input required autocomplete="off"
+                class="designation"
+                type="text"
+                name="designation"
+                placeholder="e.g. web developer"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Your Image</label>
+              <input required autocomplete="off" type="file" name="profileimg" class="profleImage" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Address</label>
+              <input required autocomplete="off"
+                class="address"
+                type="text"
+                name="address"
+                placeholder="e.g. shivaji nagar, sector-55"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Website</label>
+              <input 
+                class="website"
+                type="text"
+                name="summery"
+                placeholder="e.g. aft ore"
+              />
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid_section">
+          <div class="form_control_container" id="about_dec_me">
+            <div class="form_control">
+              <label for="">Description</label>
+              <textarea
+                name=""
+                class="text_about_dec"
+                id=""
+                cols="30"
+                rows="3"
+              ></textarea>
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="_title">
+          <h3>Professional Journey</h3>
+        </div>
+        <div class="grid_section" id="professional_jur">
+          <div class="form_control_container" id="journey">
+            <div class="form_control">
+              <label for="">Title</label>
+              <input required autocomplete="off" class="prof_title" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Company / Organization</label>
+              <input required autocomplete="off" class="prof_company" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Location</label>
+              <input required autocomplete="off" class="prof_location" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Start Date</label>
+              <input required autocomplete="off" class="prof_start_date" type="date" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">End Date</label>
+              <input required autocomplete="off" class="prof_last_date" type="date" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Description</label>
+              <input required autocomplete="off" class="prof_description" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+        <button class="add_" id="two">Add Another</button>
+
+        <hr />
+
+
+
+
+        <div class="_title">
+          <h3>Academic Background</h3>
+        </div>
+
+        <div class="grid_section" id="academic">
+          <div class="form_control_container" id="academicbg">
+            <div class="form_control">
+              <label for="">School / College</label>
+              <input required autocomplete="off" type="text" class="academic_school" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Degree</label>
+              <input required autocomplete="off" class="degree" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">City</label>
+              <input required autocomplete="off" class="city" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Start Date</label>
+              <input required autocomplete="off" class="date_start_acedmic" type="date" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">End Date</label>
+              <input required autocomplete="off" class="date_end_acedmic" type="date" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">Description</label>
+              <input required autocomplete="off" class="description_academic" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+
+        <button class="add_" id="three">Add Another</button>
+        <hr />
+
+
+
+
+        <div class="_title">
+          <h3>Project Highlights</h3>
+        </div>
+
+        <div class="grid_section" id="projectsection">
+          <div class="form_control_container" id="project">
+            <div class="form_control">
+              <label for="">project's Name</label>
+              <input required autocomplete="off" class="project_name" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+            <div class="form_control">
+              <label for="">project's Link</label>
+              <input required autocomplete="off" class="project_link" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+
+            <div class="form_control">
+              <label for="">Description</label>
+              <input required autocomplete="off" class="project_description" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+
+        <button class="add_" id="four">Add Another</button>
+        <hr />
+
+        
+        <div class="_title">
+          <h3>Skill Proficiency</h3>
+        </div>
+
+        <div class="grid_section" id="skillsection">
+          <div class="form_control_container skill" id="skill">
+            <div class="form_control">
+              <label for="">Enter Your Skills</label>
+              <input required autocomplete="off" class="skill_name" type="text" placeholder="" />
+              <small class="error_msg">found some error</small>
+            </div>
+          </div>
+        </div>
+
+        <button class="add_" id="five">Add Another</button>
+
+        <hr style="opacity: 0" />
+
+        <button class="print">
+          Preview
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+        </button>
+      </form>
+    </section>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

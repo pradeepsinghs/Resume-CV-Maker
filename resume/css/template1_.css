@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "AR One Sans", sans-serif;
+  font-weight: lighter;
+}
+body {
+  width: 100%;
+}
+section {
+  width: 620px;
+  background-color: #dfe2e1;
+  padding: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0;
+}
+.template {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.left_ {
+  width: 42%;
+}
+
+.profile_section {
+  width: 100%;
+  background-color: #161f48;
+  padding: 20px;
+  clip-path: polygon(0 0, 100% 0%, 100% 86%, 49% 100%, 0 85%);
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.profile_section .about_description {
+  margin-bottom: 70px;
+}
+
+.profile_section img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin: 10px;
+  border: 1px solid rgba(218, 218, 218, 0.377);
+  /* padding: 5px; */
+  position: relative;
+  left: 43%;
+  transform: translateX(-50%);
+  padding: 2px;
+}
+.left_ h3 {
+  font-weight: bold;
+  position: relative;
+  margin: 10px 0;
+}
+
+.left_ hr {
+  opacity: 0.3;
+  margin: 13px 0;
+}
+.ul_left {
+  list-style: none;
+  word-break: break-all;
+}
+
+.ul_left li {
+  margin: 5px 0;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.ul_left li span{
+  font-size: .7rem;
+}
+
+.ul_left li i {
+  margin-right: 5px;
+}
+
+.about_description {
+  text-align: left;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+.right_ {
+  width: 60%;
+  padding: 20px;
+  position: relative;
+
+}
+
+.right_::before {
+  position: absolute;
+  right: 0;
+  content: "";
+  top: 0;
+  width: 13%;
+  height: 110px;
+  background-color: #161f48;
+}
+
+.userName {
+  color: #161f48;
+  
+}
+.userName h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: capitalize;
+  width: 90%;
+
+}
+
+.userName p {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+  margin-top: 6px;
+  opacity: 0.8;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.work_experiance h4 , .education_ h4, .Project_ h4{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0;
+  font-weight: bold;
+  opacity: 1;
+  color: #161f48;
+  font-size: 1rem;
+}
+
+.work_experiance {
+  position: relative;
+  word-break: break-all;
+}
+
+.education_{
+  word-break: break-all;
+}
+.job_title {
+  display: flex;
+
+  flex-direction: column;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.job_title span {
+  font-size: 0.7rem;
+}
+.company_name{
+  margin-bottom: 5px;
+  background-color: #161f48;
+  padding: 4px;
+  color: #fff;
+  font-size: .9rem;
+}
+.c_name{
+  text-transform: capitalize;
+}
+.exp_details {
+  position: relative;
+  list-style-type: none;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  opacity: .8;
+}
+
+.right_ hr {
+  margin: 16px 0 20px 0;
+  opacity: .2;
+}
+.job_title_date_1{
+  height: 20px;
+  width: auto;
+  text-align: left;
+  color: #161f48;
+  font-size: .7rem!important;
+  margin-top: 5px;
+}
+
+
+.job_title p{
+  /* position: absolute; */
+  width: auto;
+}
+
+.work_pro{
+  width: 100%;
+  word-break: break-all;
+}
+.work_pro p{
+  margin: 7px 0;
+  width: 100%;
+
+}
+
+.work_pro p:nth-child(2){
+  color: blue;
+  font-size: .8rem;
+}
+.work_pro p:nth-child(3){ 
+  font-size: .8rem;
+}
+
+.skill_section{
+  margin: 10px;
+
+}
+
+.skill_section h4{
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+
+.skill_section ul{
+  width: 100%;
+  list-style-type: none;
+  word-break: break-all;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(50% - 20px), 1fr)
+  ); /
+}
+.skill_section ul li{
+  border: 1px solid #161f483f;
+  width: 100;
+  text-align: center;
+  color:#161f48;
+  font-size: .8rem;
+  height: 50px;
+  place-items: center;
+  display: grid;
+}
+
+.print{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 25px;
+  padding: 11px 30px;
+  background-color: rgb(83, 112, 241);
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+
+

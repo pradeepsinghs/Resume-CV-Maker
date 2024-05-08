@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview resume</title>
+    <link rel="stylesheet" href="css/template1_.css" />
+   
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/print.css" media="print" />
+  </head>
+  <body>
+
+    <section>
+      <div class="template">
+        <div class="left_">
+          <div class="profile_section">
+            <img src="../assets/logo.jpg" class="profileImg" alt="logo" />
+            <hr />
+            <h3>Contact No.</h3>
+            <ul class="ul_left">
+              <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span id="phone">0123456789</span>
+              </li>
+              <li>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span id="email">ayusht@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <span id="website">www.resume.com</span>
+              </li>
+              <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span id="address"> 123 abc teb, fsdirit</span>
+              </li>
+            </ul>
+
+            <hr />
+
+            <h3>About me</h3>
+            <div class="about_description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+              inventore magni
+            </div>
+          </div>
+
+          <div class="skill_section">
+            <h4>
+              Skill
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </h4>
+
+            <ul></ul>
+          </div>
+        </div>
+        <div class="right_">
+          <div class="userName">
+            <h2>Ayushr</h2>
+            <p id="designation">Web Developer</p>
+          </div>
+
+          <div class="work_experiance">
+            <h4>
+              Work Experiance
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </h4>
+          </div>
+          <div class="education_">
+            <h4>
+              Education
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </h4>
+          </div>
+          <div class="Project_">
+            <h4>
+              Project Highlights
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <button class="print">Print</button>
+    </section>
+
+    <script>
+      const storeValue = JSON.parse(localStorage.getItem("userValue"));
+
+      let userName_ = document.querySelector(".userName h2");
+      let phone = document.getElementById("phone");
+      let email = document.getElementById("email");
+      let website = document.getElementById("website");
+      let designation_title = document.getElementById("designation");
+      let address = document.getElementById("address");
+      let profileImg = document.querySelector(".profileImg");
+      let about_description = document.querySelector(".about_description");
+
+      //professional_jur
+      let job_title = document.querySelector(".job_title p");
+
+      userName_.innerHTML = `${storeValue.firstname} ${storeValue.middlename} ${storeValue.lastname}`;
+      phone.innerHTML = `${storeValue.phone}`;
+      email.innerHTML = `${storeValue.email}`;
+      website.innerHTML = `${storeValue.website}`;
+      designation_title.innerHTML = `${storeValue.designation}`;
+      address.innerHTML = `${storeValue.address}`;
+      about_description.innerHTML = `${storeValue.text_about_dec}`;
+      profileImg.src = `${storeValue.profileImg}`;
+
+      storeValue.prof_title_value.forEach((element, index) => {
+        let p = `<div class="text_root">
+         
+              <div class="job_title">
+                <p>${element}</p>
+                <span class="job_title_date_1">${storeValue.prof_start_date_value[index]} / ${storeValue.prof_last_date_value[index]}</span>
+              </div>
+            </div>
+           
+            <div class="company_name">
+              <span class="c_name">${storeValue.prof_company_value[index]}</span> |
+              <span class="location">${storeValue.prof_location_value[index]}</span>
+            </div>
+            <ul class="exp_details">
+              <li class="exp_description">${storeValue.prof_description}</li>
+            </ul>
+        <hr />`;
+
+        document.querySelector(".work_experiance").innerHTML += p;
+      });
+
+      storeValue.degree.forEach((element, index) => {
+        let p = `<div class="text_root">
+         
+         <div class="job_title">
+           <p>${element}</p>
+           <span class="job_title_date_1">${storeValue.date_start_acedmic[index]} / ${storeValue.date_end_acedmic[index]}</span>
+         </div>
+       </div>
+      
+       <div class="company_name">
+         <span class="c_name">${storeValue.academic_school[index]}</span> |
+         <span class="location">${storeValue.city[index]}</span>
+       </div>
+       <ul class="exp_details">
+         <li class="exp_description">${storeValue.description_academic[index]}</li>
+       </ul>
+   <hr />`;
+
+        document.querySelector(".education_").innerHTML += p;
+      });
+
+      storeValue.project_name.forEach((element, index) => {
+        let p = `<div class="work_pro">
+                  <p>${element}</p>
+                  <p>${storeValue.project_link[index]}</p>
+                  <p>${storeValue.project_description[index]}</p>
+                </p>
+                <hr />`;
+
+        document.querySelector(".Project_").innerHTML += p;
+      });
+
+      storeValue.skill_name.forEach((element, index) => {
+        let p = `<li>${element}</li>`;
+
+        document.querySelector(".skill_section ul").innerHTML += p;
+      });
+
+      document.querySelector(".print").addEventListener("click", () => {
+        window.print();
+      });
+    </script>
+  </body>
+</html>

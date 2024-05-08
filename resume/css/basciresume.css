@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: "AR One Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 40px;
+}
+
+.container form {
+  width: 100%;
+}
+
+.container form ._title {
+  background: linear-gradient(to left, #4e5481, rgb(18, 10, 48));
+  color: #fff;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+}
+.grid_section {
+  width: 100%;
+}
+.form_control_container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(33.33% - 20px), 1fr)
+  ); /* Adjust the width as needed */
+  grid-gap: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+.form_control {
+  position: relative;
+}
+
+.form_control label {
+  font-size: 0.8rem;
+  color: #000000ce;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.form_control input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #0000002f;
+  padding: 10px;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+
+.form_control input::placeholder {
+  opacity: 0.8;
+}
+.form_control input[type="file"] {
+  padding: 7px;
+}
+.form_control .error_msg {
+  color: rgb(255, 72, 0);
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: none;
+}
+
+hr {
+  opacity: 0.3;
+  margin: 30px;
+}
+
+.pinnacle {
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
+}
+.skill {
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
+}
+
+.add_,
+.print {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 250ms;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.add_:hover {
+  opacity: 0.7;
+}
+
+.print {
+  background-color: rgb(2, 78, 139);
+  padding: 20px 50px;
+  font-size: 1.2rem;
+  transition-duration: 200ms;
+}
+.print:hover {
+  opacity: 0.7;
+}
+.close {
+  position: absolute;
+  right: -2%;
+  top: 0%;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 60, 0);
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  place-items: center;
+  display: grid;
+  cursor: pointer;
+  scale: 1.1;
+  transition-duration: 300ms;
+}
+.close i {
+  color: #fff;
+  transition-duration: 500ms;
+}
+
+.close:hover i {
+  rotate: 360deg;
+}
+.close:hover {
+  opacity: 0.7;
+}
+
+.text_root {
+  width: 100%;
+  background-color: red;
+}
+#about_dec_me {
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
+  margin-top: -18px;
+  display: flex;
+  flex-direction: column;
+}
+
+#about_dec_me .form_control label{
+  margin-bottom: 10px;
+}
+
+.text_about_dec {
+  width: 100%;
+  outline: none;
+  border: 1px solid #0000002f;
+  padding: 10px;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .form_control_container {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
+  }
+
+  .add_ {
+    left: 5%;
+    transform: translateX(0);
+  }
+}
